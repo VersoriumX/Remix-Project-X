@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "VersoriumX")/_/husky.sh"
-#!/bin/bash
 
 # Check if Node.js is installed
 if ! command -v node &> /dev/null
