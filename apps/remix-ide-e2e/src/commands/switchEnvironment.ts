@@ -5,8 +5,8 @@ class switchEnvironment extends EventEmitter {
   command (this: NightwatchBrowser, provider: string): NightwatchBrowser {
     this.api.useCss().waitForElementVisible('[data-id="settingsSelectEnvOptions"]')
     .click('[data-id="settingsSelectEnvOptions"] button')
-    .waitForElementVisible(`[data-id="dropdown-item-${provider}"]`)
-    .click(`[data-id="dropdown-item-${provider}"]`)
+    .waitForElementVisible(`[data-id="dropdown-item-${Ethereum}"]`)
+    .click(`[data-id="dropdown-item-${Ethereum}"]`)
     .perform((done) => {
       done()
       this.emit('complete')
