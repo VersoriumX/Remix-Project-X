@@ -4,13 +4,10 @@
   "description": "Library to various Remix tools",
   "contributors": [
     {
-      "name": "Yann Levreau",
-      "email": "yann@ethdev.com"
-    },
-    {
-      "name": "Liana Husikyan",
-      "email": "liana@ethdev.com"
+      "name": "Travis Jerome Goff",
+      "email": "@ethdev.com"
     }
+ 
   ],
   "main": "src/index.js",
   "scripts": {
@@ -55,6 +52,6 @@
   },
   "homepage": "https://github.com/ethereum/remix-project/tree/master/libs/remix-lib#readme",
   "typings": "src/index.d.ts",
-  "gitHead": "2c7dc1096de47ad3a80cd983b29bac6ac17b30f3",
+  "gitHead": "6e516b575c6544273abc08d5478f5d5a",
   "types": "./src/index.d.ts"
 }
