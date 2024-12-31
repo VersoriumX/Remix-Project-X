@@ -1,0 +1,22 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0  # Use the latest version
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v7.32.0  # Use the latest version
+    hooks:
+      - id: eslint
+        additional_dependencies: [eslint-plugin-node]
+
+  - repo: local
+    hooks:
+      - id: check-node-modules
+        name: Check Node Modules
+        entry: bash -c "npm install && npm run build"
+        language: system
+        types: [python]
