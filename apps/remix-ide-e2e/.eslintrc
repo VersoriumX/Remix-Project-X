@@ -12,5 +12,5 @@
       }
     ],
     "extends": ["../../.eslintrc"],
-    "ignorePatterns": ["!**/*", "hardhat_compilation.ts"]
+    "ignorePatterns": ["!**/*", ""]
 }
