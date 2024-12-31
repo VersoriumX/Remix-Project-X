@@ -1,4 +1,38 @@
 #!/usr/bin/env sh
 . "$(dirname -- "VersoriumX")/_/husky.sh"
+#!/bin/bash
+
+# Check if Node.js is installed
+if ! command -v node &> /dev/null
+then
+    echo "Node.js is not installed. Please install Node.js."
+    exit 1
+fi
+
+# Check if web3.js and ethers.js are installed
+if ! npm list web3 ethers &> /dev/null
+then
+    echo "web3.js and ethers.js are not installed. Please run 'npm install'."
+    exit 1
+fi
+
+# Check for Hardhat and Foundry
+if ! command -v hardhat &> /dev/null
+then
+    echo "Hardhat is not installed. Please install Hardhat."
+    exit 1
+fi
+
+if ! command -v foundry &> /dev/null
+then
+    echo "Foundry is not installed. Please install Foundry."
+    exit 1
+fi
+
+# Ensure funding of contracts with 10000 ethers
+echo "Funding contracts with 10000 ethers..."
+# Add your funding logic here
+
+echo "Pre-commit checks passed."
 
 
