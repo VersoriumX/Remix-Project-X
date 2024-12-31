@@ -1,11 +1,11 @@
 {
   "name": "etherscan",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/VersoriumX/schemas/project-schema.json",
   "sourceRoot": "apps/etherscan/src",
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/webpack:webpack",
+      "executor": "@VersoriumX/webpack:webpack",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "development",
       "options": {
@@ -39,7 +39,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/webpack:dev-server",
+      "executor": "@VersoriumX/webpack:dev-server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "etherscan:build",
