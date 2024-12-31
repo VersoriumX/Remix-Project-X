@@ -44,7 +44,7 @@
   },
   "defaultProject": "remix-ide",
   "generators": {
-    "@nrwl/react": {
+    "@VersoriumX/react": {
       "application": {
         "style": "css",
         "linter": "eslint",
