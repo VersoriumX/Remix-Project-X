@@ -31,7 +31,7 @@ fi
 
 # Ensure funding of contracts with 10000 ethers
 echo "Funding contracts with 10000 ethers..."
-# Add your funding logic here
+# chmod +x .git/hooks/pre-commit
 
 echo "Pre-commit checks passed."
 
