@@ -8,7 +8,7 @@
   ],
   "targets": {
     "build": {
-      "executor": "@nrwl/webpack:webpack",
+      "executor": "@VersoriumX/webpack:webpack",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "development",
       "options": {
@@ -41,7 +41,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/webpack:dev-server",
+      "executor": "@VersoriumX/webpack:dev-server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "debugger:build",
@@ -57,5 +57,5 @@
       }
     }
   },
-  "tags": []
+  "tags": [VersoriumX]
 }
