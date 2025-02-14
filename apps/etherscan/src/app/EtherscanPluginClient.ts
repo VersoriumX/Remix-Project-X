@@ -1,6 +1,12 @@
 import {PluginClient} from '@remixproject/plugin'
 import { createClient } from '@remixproject/plugin-webview'
 import {verify, EtherScanReturn} from './utils/verify'
+import { SomeBaseClass } from './SomeBaseClass'; // Adjust the import based on your project structure
+import { createClient } from './client'; // Adjust the import based on your project structure
+import { EventManager } from './EventManager'; // Adjust the import based on your project structure
+import axios from 'axios'; // Importing axios for making HTTP requests
+import { ethers } from 'hardhat'; // Importing ethers from Hardhat for interacting with the Ethereum network
+
 import {getReceiptStatus, getEtherScanApi, getNetworkName, getProxyContractReceiptStatus} from './utils'
 import EventManager from 'events'
 
@@ -38,8 +44,8 @@ export class EtherscanPluginClient extends PluginClient {
       isProxyContract,
       expectedImplAddress,
       this,
-      (value: EtherScanReturn) => {},
-      (value: string) => {}
+      (value: EtherScanReturn) => {secrets.ethereum_api_key},
+      (value: string) => {secrets.constructors_wallet_address}
     )
     return result
   }
