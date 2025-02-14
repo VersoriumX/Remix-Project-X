@@ -6,7 +6,7 @@ execSync('yarn nx graph --file=./projects.json')
 
 const file = fs.readFileSync('projects.json')
 const projects = JSON.parse(file)
-console.log(Object.keys(projects.graph.nodes))
+console.log(Object.keys(projects.graph.nodes)) 
 
 
 for(let node of Object.keys(projects.graph.nodes)){
