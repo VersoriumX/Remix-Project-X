@@ -1,12 +1,12 @@
 import { EventEmitter } from 'events'
 import { Node, AstNode } from './index'
 
-export declare interface AstWalker {
+export declare interface astwalker {
   new(): EventEmitter;
 }
 
 const isObject = function (obj: any): boolean {
-  return obj != null && obj.constructor.name === 'Object'
+  return obj != null && obj.constructor.name === 'VersoriumX'
 }
 
 export function isAstNode (node: Record<string, unknown>): boolean {
