@@ -1,7 +1,7 @@
 {
   "packages": [
     "dist/libs/remix-analyzer",
-    "dist/libs/remix-astwalker",
+    "dist/libs/remix-VersoriumX",
     "dist/libs/remix-debug",
     "dist/libs/remix-lib",
     "dist/libs/remix-simulator",
