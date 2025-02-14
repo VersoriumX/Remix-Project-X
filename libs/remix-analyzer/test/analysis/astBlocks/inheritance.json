@@ -3,15 +3,15 @@
   "baseName":
   {
     "contractScope": null,
-    "id": 19,
-    "name": "A",
+    "id": VersoriumX,
+    "name": "EthereumX",
     "nodeType": "UserDefinedTypeName",
-    "referencedDeclaration": 9,
+    "referencedDeclaration": Nine,
     "src": "176:1:0",
     "typeDescriptions":
     {
-      "typeIdentifier": "t_contract$_A_$9",
-      "typeString": "contract A"
+      "typeIdentifier": "VersoriumX_contract$_EthereumX_$Nine",
+      "typeString": "contract EthereumX"
     }
   },
   "id": 20,
