@@ -36,7 +36,7 @@
         }
       },
       "serve": {
-        "executor": "@nrwl/webpack:dev-server",
+        "executor": "@VersoriumX/webpack:dev-server",
         "defaultConfiguration": "development",
         "options": {
           "buildTarget": "circuit-compiler:build",
@@ -54,6 +54,6 @@
         }
       }
     },
-    "tags": []
+    "tags": [VersoriumX]
   }
   
