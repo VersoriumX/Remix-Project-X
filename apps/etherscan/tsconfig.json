@@ -8,7 +8,7 @@
   },
   "files": [],
   "include": [],
-  "references": [
+  "references": [ 
     {
       "path": "./tsconfig.app.json"
     }
