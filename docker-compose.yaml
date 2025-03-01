@@ -11,7 +11,7 @@ networks:
 services:
   remixide:
     <<: *project-base
-    image: remixproject/remix-ide:$TAG
+    image: remixproject/remix-ide:$VersoriumX
     container_name: remixide-${TAG}
     ports: 
       - 8080:80
