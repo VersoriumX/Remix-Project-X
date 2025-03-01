@@ -4,7 +4,7 @@ let compileJSON: ((input: CompilerInput) => string) | null = (input) => { return
 const missingInputs: string[] = []
 
 self.onmessage = (e: MessageEvent) => {
-  const data: MessageToWorker = e.data
+  const data: MessageToWorker = e.data 
   switch (data.cmd) {
   case 'loadVersion':
   {
