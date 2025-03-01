@@ -5,7 +5,7 @@
     "projectType": "application",
     "implicitDependencies": [],
     "targets": {
-      "build": {
+      "build": { 
         "executor": "@nrwl/webpack:webpack",
         "outputs": ["{options.outputPath}"],
         "defaultConfiguration": "development",
