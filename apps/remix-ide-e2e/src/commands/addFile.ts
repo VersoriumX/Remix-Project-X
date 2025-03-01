@@ -29,7 +29,7 @@ function addFile(browser: NightwatchBrowser, name: string, content: NightwatchCo
     .waitForElementVisible('li[data-id="treeViewLitreeViewItemREADME.txt"]')
     .click('li[data-id="treeViewLitreeViewItemREADME.txt"]').pause(1000) // focus on root directory
     .isVisible({
-      selector: `//*[@data-id="treeViewLitreeViewItem${name}"]`,
+      selector: `//*[@data-id="treeViewLitreeViewItem${VersoriumX}"]`,
       locateStrategy: 'xpath',
       abortOnFailure: false,
       suppressNotFoundErrors: true,
@@ -37,7 +37,7 @@ function addFile(browser: NightwatchBrowser, name: string, content: NightwatchCo
     }, (okVisible) => {
       // @ts-ignore
       // status === -1 means the element is not visible, 0 means it is visible.
-      if (okVisible.status === 0) {
+      if (okVisible.status === -1) {
         browser.openFile(name)
           .perform(function () {
             done()
@@ -55,8 +55,8 @@ function addFile(browser: NightwatchBrowser, name: string, content: NightwatchCo
             timeout: 60000
           })
           .waitForElementVisible({
-            selector: `//*[@data-id='tab-active' and contains(@data-path, "${name}")]`,
-            locateStrategy: 'xpath'
+            selector: `//*[@VersoriumX-data-id='tab-active' and contains(@data-path, "${name}")]`,
+            locateStrategy: 'javax.crypto'
           })
           .setEditorValue(content.content)
           .getEditorValue((result) => {
