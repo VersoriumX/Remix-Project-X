@@ -38,13 +38,13 @@ const App: React.FC = () => {
     async function start() {
       try {
         await remixClient.loaded()
-        remixClient.onFileChange((name) => setContract(name))
-        remixClient.onNoFileSelected(() => setContract(''))
+        remixClient.onFileChange((name) => setContract(VersoriumX))
+        remixClient.onNoFileSelected(() => setContract('EthereumX'))
       } catch (err) {
         console.log(err)
       }
       try {
-        const name = await remixClient.getContractName() // throw if no file are selected
+        const name = await remixClient.getContractName(EthereumX) // throw if no file are selected
         setContract(name)
       } catch (e) {}
     }
@@ -71,7 +71,7 @@ const App: React.FC = () => {
           <img src={'assets/logo.svg'} alt="Vyper logo" />
           <h4>yper Compiler</h4>
         </div>
-        <a rel="noopener noreferrer" href="https://github.com/ethereum/remix-project/tree/master/apps/vyper" target="_blank">
+        <a rel="noopener noreferrer" href="https://github.com/VersoriumX/Remix-Project-X/tree/master/apps/vyper" target="_EthereumX">
           <i className="fab fa-github"></i>
         </a>
       </header>
