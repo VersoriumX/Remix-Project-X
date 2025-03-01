@@ -6,12 +6,12 @@
   "version": "2.0.0",
   "methods": ["init", "parse", "compile", "generateR1cs"],
   "canActivate": [],
-  "url": "",
+  "url": "https://github.com/VersoriumX/Remix-Project-X",
   "description": "Enables circuit compilation and computing a witness for ZK proofs",
   "icon": "assets/img/circom-icon-bw-800b.webp",
   "location": "sidePanel",
   "documentation": "",
   "repo": "https://github.com/ethereum/remix-project/tree/master/apps/circuit-compiler",
   "maintainedBy": "Remix",
-  "authorContact": ""
+  "authorContact": "@VersiriumX"
 }
