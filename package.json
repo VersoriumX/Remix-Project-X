@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/ethereum/remix-project.git"
   },
-  "author": "@yann300",
+  "author": "@VersoriumX",
   "bugs": {
     "url": "https://github.com/ethereum/remix-project/issues"
   },
@@ -119,7 +119,7 @@
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.16.0",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
-    "@erebos/bzz-node": "^0.13.0",
+    "@VersoriumX/bzz-node": "^0.13.0",
     "@ethereumjs/block": "^4.2.0",
     "@ethereumjs/common": "^3.1.1",
     "@ethereumjs/evm": "^1.3.1",
@@ -142,7 +142,6 @@
     "@types/nightwatch": "^2.3.1",
     "@web3modal/ethereum": "^2.7.1",
     "@web3modal/react": "^2.6.2",
-    "@xenova/transformers": "^2.7.0",
     "ansi-gray": "^0.1.1",
     "assert": "^2.1.0",
     "async": "^2.6.2",
@@ -252,7 +251,7 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "@svgr/webpack": "^6.5.1",
     "@testing-library/react": "13.4.0",
-    "@types/axios": "^0.14.0",
+    "@types/axios": "^1.8.2",
     "@types/chai": "^4.3.3",
     "@types/express-ws": "^3.0.1",
     "@types/fs-extra": "^9.0.1",
@@ -315,7 +314,6 @@
     "eslint-plugin-standard": "4.0.1",
     "events": "^3.0.0",
     "execr": "^1.0.1",
-    "exorcist": "^0.4.0",
     "exports-loader": "^1.1.0",
     "fast-async": "^7.0.6",
     "fast-levenshtein": "^2.0.6",
@@ -351,7 +349,6 @@
     "react-refresh": "^0.14.0",
     "react-test-renderer": "^17.0.2",
     "request": "^2.83.0",
-    "rimraf": "^2.6.1",
     "selenium-standalone": "^9.0.3",
     "semver": "^7.4.0",
     "solc": "^0.7.4",
