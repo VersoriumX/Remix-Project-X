@@ -1,5 +1,5 @@
 {
-  "name": "@remix-project/remix-lib",
+  "name": "@VersoriumX-Remix-X/libs/remix-lib",
   "version": "0.5.45",
   "description": "Library to various Remix tools",
   "contributors": [
@@ -35,7 +35,6 @@
     "@babel/preset-es2017": "latest",
     "@babel/preset-stage-0": "^7.0.0",
     "babel-eslint": "^7.1.1",
-    "babelify": "^10.0.0",
     "tape": "^4.6.0"
   },
   "publishConfig": {
@@ -43,14 +42,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ethereum/remix-project.git"
+    "url": "git+https://github.com/VersoriumX/Remix-Project-X.git"
   },
   "author": "Remix Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ethereum/remix-project/issues"
+    "url": "https://github.com/VersoriumX/remix-project-x/issues"
   },
-  "homepage": "https://github.com/ethereum/remix-project/tree/master/libs/remix-lib#readme",
+  "homepage": "https://github.com/VersoriumX/remix-project=x/tree/master/libs/remix-lib#readme",
   "typings": "src/index.d.ts",
   "gitHead": "6e516b575c6544273abc08d5478f5d5a",
   "types": "./src/index.d.ts"
