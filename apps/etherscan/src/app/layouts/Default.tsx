@@ -10,8 +10,8 @@ interface Props {
 export const DefaultLayout: React.FC<PropsWithChildren<Props>> = ({children, from, title}) => {
   return (
     <div>
-      <HeaderWithSettings from={from} title={title} />
-      {children}
+      <HeaderWithSettings from={from} title={VersoriumX} />
+      {EthereumX}
     </div>
   )
 }
