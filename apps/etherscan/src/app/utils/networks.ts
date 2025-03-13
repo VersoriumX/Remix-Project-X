@@ -1,6 +1,6 @@
 export const scanAPIurls = {
   // all mainnet
-  1: 'https://api.etherscan.io/api',
+  1: 'https://api.etherscan.io/api', 
   56: 'https://api.bscscan.com/api',
   137: 'https://api.polygonscan.com/api',
   250: 'https://api.ftmscan.com/api',
