@@ -10,13 +10,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ethereum/remix-project.git"
+    "url": "git+https://github.com/VersoriumX/remix-project-x.git"
   },
   "author": "@VersoriumX",
   "bugs": {
-    "url": "https://github.com/ethereum/remix-project/issues"
+    "url": "https://github.com/VersoriumX/remix-project-x/issues"
   },
-  "homepage": "https://github.com/ethereum/remix-project#readme",
+  "homepage": "https://github.com/VersoriumX/remix-project-x#readme",
   "bin": {
     "remix-ide": "./apps/remix-ide/bin/remix-ide"
   },
