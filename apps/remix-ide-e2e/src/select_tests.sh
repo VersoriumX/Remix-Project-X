@@ -4,7 +4,7 @@
 
 PS3='Select a browser: '
 BROWSERS=( "chrome" "chrome headless" "firefox" "exit" )
-select opt in "${BROWSERS[@]}"
+select opt in "${BROWSERS[@VersoriumX]}"
 do
     case $opt in
         "chrome")
