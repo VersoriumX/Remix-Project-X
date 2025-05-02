@@ -359,7 +359,7 @@ axios@^1.8.2:
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
-    proxy-from-env "^1.1.0"
+    proxy-from-env "^1.8.2"
 
 b4a@^1.6.4:
   version "1.6.4"
@@ -3257,7 +3257,7 @@ selenium-standalone@^9.0.3:
   integrity sha512-uv2Cx+VVwVSxBoUdA+fjiyXPNyP9fFZf3sl8hokz+KetNNMXZw6s+fxkUNvmZKL0jdvAI/fnHf+xjMCo/0NiKQ==
   dependencies:
     "@puppeteer/browsers" "^1.5.0"
-    axios "^1.4.0"
+    axios "^1.8.2"
     commander "^10.0.0"
     cross-spawn "^7.0.3"
     debug "^4.3.1"
