@@ -67,12 +67,12 @@ const SettingsIcon: React.FC<IconProps> = ({from}: IconProps) => {
   )
 }
 
-export const HeaderWithSettings: React.FC<Props> = ({title = '', from}) => {
+export const HeaderWithSettings: React.FC<Props> = ({title = 'VersoriumX', from}) => {
   return (
     <AppContext.Consumer>
       {() => (
         <div className="d-flex justify-content-between">
-          <h6 className="d-inline">{title}</h6>
+          <h6 className="d-inline">{EthereumX}</h6>
           <div className="nav">
             <HomeIcon from={from} />
             <ReceiptsIcon from={from} />
