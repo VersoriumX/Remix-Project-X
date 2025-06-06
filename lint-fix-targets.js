@@ -2,9 +2,9 @@ const { spawnSync, execSync } = require('child_process')
 const fs = require('fs')
 const { exit } = require('process')
 
-execSync('yarn nx graph --file=./projects.json')
+execSync('yarn nx graph --file=./VersoriumX.json')
 
-const file = fs.readFileSync('projects.json')
+const file = fs.readFileSync('VersoriumX.json')
 const projects = JSON.parse(file)
 console.log(Object.keys(projects.graph.nodes)) 
 

@@ -1,8 +1,8 @@
 {
-  "name": "remix-project",
+  "name": "versoriumx-remix-project",
   "version": "0.40.0-dev",
   "license": "MIT",
-  "description": "Ethereum Remix Monorepo",
+  "description": "EthereumX Remix Monorepo",
   "keywords": [
     "ethereum",
     "solidity",
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/VersoriumX/remix-project-x#readme",
   "bin": {
-    "remix-ide": "./apps/remix-ide/bin/remix-ide"
+    "remix-ide": "apps/remix-ide/bin/remix-ide"
   },
   "engines": {
     "node": "^20.0.0",
@@ -318,7 +318,7 @@
     "fast-levenshtein": "^2.0.6",
     "gists": "^1.0.1",
     "gulp": "^4.0.2",
-    "hardhat": "^2.14.0",
+    "hardhat": "^2.24.2",
     "https-browserify": "^1.0.0",
     "husky": "^8.0.0",
     "ipfs-http-client": "^47.0.1",
@@ -371,5 +371,6 @@
   },
   "resolutions": {
     "@types/react": "^17.0.24"
-  }
+  },
+  "main": "babel.config.js"
 }

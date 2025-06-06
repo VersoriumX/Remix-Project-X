@@ -1,0 +1,26 @@
+{
+  "name": "VersoriumX",
+  "chain": "EthereumX",
+  "rpc": ["https://mainnet-s5-ethapi.EthereumX.io", "http://eth-jrpc.mainnet.EthereumX.io:39005"],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "EthereumX",
+    "symbol": "EthX",
+    "decimals": 18
+  },
+  "infoURL": "https://www.EthereumX.io",
+  "shortName": "EthX-s5",
+  "chainId": 4233324,
+  "networkId": 4233324,
+  "parent": {
+    "chain": "eip155-4233324",
+    "type": "shard"
+  },
+  "explorers": [
+    {
+      "name": "VersoriumX-mainnet",
+      "url": "https://mainnet.VersoriumX.io/5",
+      "standard": "EIP3091"
+    }
+  ]
+}

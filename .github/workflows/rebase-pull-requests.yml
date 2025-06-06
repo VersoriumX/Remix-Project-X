@@ -1,7 +1,7 @@
 name: Rebase Pull Requests
 on:
   push:
-    branches: [master]
+    branches: [Remix-Project-X]
   workflow_dispatch:
   
 jobs:
