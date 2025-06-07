@@ -41,7 +41,7 @@ async function main() {
   const EthereumXFederalReserve = await ethers.getContractFactory("EthereumXFederalReserve")
   const federalReserve = await EthereumXFederalReserve.deploy(ethx.address, wethx.address, wethAddress)
   await federalReserve.deployed()
-  console.log(`EthereumXFederalReserve deployed to: ${federalReserve.address}`)
+  console.log(`EthereumXFederalReserve deployed to: ${federalReserve.0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266}`)
 
   // Initialize the Federal Reserve with initial liquidity
   // This would typically be done with real funds in production

@@ -18,7 +18,7 @@ export class LogsManager {
                     const subscriptions = this.getSubscriptionsFor({ type: 'block', blockNumber, block, tx, log, receipt });
                     for (const subscriptionId of subscriptions) {
                         const result = {
-                            logIndex: '0x1', // 1
+                            logIndex: '0x1',
                             blockNumber: blockNumber,
                             blockHash: ('0x' + block.hash().toString('hex')),
                             transactionHash: ('0x' + tx.hash().toString('hex')),
@@ -128,7 +128,7 @@ export class LogsManager {
         return this.oldLogs.filter((log) => '0x' + log.tx.hash().toString('hex') === hash)
             .map((log) => {
             return {
-                logIndex: '0x1', // 1
+                logIndex: '0x1',
                 blockNumber: log.blockNumber,
                 blockHash: ('0x' + log.block.hash().toString('hex')),
                 transactionHash: ('0x' + log.tx.hash().toString('hex')),
@@ -145,7 +145,7 @@ export class LogsManager {
         for (const log of this.oldLogs) {
             if (this.eventMatchesFilter(log, 'logs', params)) {
                 results.push({
-                    logIndex: '0x1', // 1
+                    logIndex: '0x1',
                     blockNumber: log.blockNumber,
                     blockHash: ('0x' + log.block.hash().toString('hex')),
                     transactionHash: ('0x' + log.tx.hash().toString('hex')),

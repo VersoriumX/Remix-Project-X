@@ -130,7 +130,7 @@ const resultToArtifact = (result) => {
         deployedLinkReferences: artefact.evm.deployedBytecode.linkReferences
     };
 };
-const getContractFactory = (contractNameOrABI_1, bytecode_1, ...args_1) => __awaiter(void 0, [contractNameOrABI_1, bytecode_1, ...args_1], void 0, function* (contractNameOrABI, bytecode, signerOrOptions = null) {
+const getContractFactory = (contractNameOrABI, bytecode, signerOrOptions = null) => __awaiter(void 0, void 0, void 0, function* () {
     if (bytecode && contractNameOrABI) {
         //@ts-ignore
         return new ethers.ContractFactory(contractNameOrABI, bytecode, signerOrOptions || web3Provider.getSigner());
@@ -149,7 +149,7 @@ const getContractFactory = (contractNameOrABI_1, bytecode_1, ...args_1) => __awa
         throw new Error('Invalid contract name or ABI provided');
     }
 });
-const getContractAt = (contractNameOrABI_1, address_1, ...args_1) => __awaiter(void 0, [contractNameOrABI_1, address_1, ...args_1], void 0, function* (contractNameOrABI, address, signer = null) {
+const getContractAt = (contractNameOrABI, address, signer = null) => __awaiter(void 0, void 0, void 0, function* () {
     //@ts-ignore
     const provider = web3Provider;
     if (typeof contractNameOrABI === 'string') {
@@ -199,7 +199,7 @@ If you want to call a contract using ${artifact.contractName} as its interface u
     //@ts-ignore
     return new ethers.ContractFactory(artifact.abi, linkedBytecode || artifact.bytecode, signer || web3Provider.getSigner());
 });
-const getContractAtFromArtifact = (artifact_1, address_1, ...args_1) => __awaiter(void 0, [artifact_1, address_1, ...args_1], void 0, function* (artifact, address, signerOrOptions = null) {
+const getContractAtFromArtifact = (artifact, address, signerOrOptions = null) => __awaiter(void 0, void 0, void 0, function* () {
     if (!isArtifact(artifact)) {
         throw new Error(`You are trying to create a contract factory from an artifact, but you have not passed a valid artifact parameter.`);
     }

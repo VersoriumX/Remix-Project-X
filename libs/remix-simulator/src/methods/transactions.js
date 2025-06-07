@@ -100,7 +100,7 @@ export class Transactions {
                 blockHash: '0x' + txBlock.hash().toString('hex'),
                 blockNumber: bigIntToHex(txBlock.header.number),
                 gasUsed: receipt.gasUsed,
-                cumulativeGasUsed: receipt.gasUsed, // only 1 tx per block
+                cumulativeGasUsed: receipt.gasUsed,
                 contractAddress: receipt.contractAddress,
                 logs,
                 status: receipt.status,
@@ -229,7 +229,7 @@ export class Transactions {
                 gas: toHex(BigInt(receipt.gas)),
                 chainId: '0xd05',
                 // 'gasPrice': '2000000000000', // 0x123
-                gasPrice: '0x4a817c800', // 20000000000
+                gasPrice: '0x4a817c800',
                 hash: receipt.transactionHash,
                 input: receipt.input,
                 nonce: bigIntToHex(tx.nonce),
@@ -269,7 +269,7 @@ export class Transactions {
                 gas: toHex(BigInt(receipt.gas)),
                 chainId: '0xd05',
                 // 'gasPrice': '2000000000000', // 0x123
-                gasPrice: '0x4a817c800', // 20000000000
+                gasPrice: '0x4a817c800',
                 hash: receipt.transactionHash,
                 input: receipt.input,
                 nonce: bigIntToHex(tx.nonce),
@@ -306,7 +306,7 @@ export class Transactions {
                 gas: toHex(BigInt(receipt.gas)),
                 // 'gasPrice': '2000000000000', // 0x123
                 chainId: '0xd05',
-                gasPrice: '0x4a817c800', // 20000000000
+                gasPrice: '0x4a817c800',
                 hash: receipt.transactionHash,
                 input: receipt.input,
                 nonce: bigIntToHex(tx.nonce),

@@ -146,12 +146,12 @@ export class TxListener {
         this._isListening = false;
     }
     _startListenOnNetwork() {
+        var _a;
         return __awaiter(this, void 0, void 0, function* () {
-            var _a;
             let lastSeenBlock = ((_a = this.executionContext.lastBlock) === null || _a === void 0 ? void 0 : _a.number) - BigInt(1);
             let processingBlock = false;
             const processBlocks = () => __awaiter(this, void 0, void 0, function* () {
-                var _a, _b;
+                var _b, _c;
                 if (!this._isListening)
                     return;
                 if (processingBlock)
@@ -163,12 +163,12 @@ export class TxListener {
                     return;
                 }
                 if (!lastSeenBlock) {
-                    lastSeenBlock = (_a = this.executionContext.lastBlock) === null || _a === void 0 ? void 0 : _a.number; // trying to resynchronize
+                    lastSeenBlock = (_b = this.executionContext.lastBlock) === null || _b === void 0 ? void 0 : _b.number; // trying to resynchronize
                     console.log('listen on blocks, resynchronising');
                     processingBlock = false;
                     return;
                 }
-                const current = (_b = this.executionContext.lastBlock) === null || _b === void 0 ? void 0 : _b.number;
+                const current = (_c = this.executionContext.lastBlock) === null || _c === void 0 ? void 0 : _c.number;
                 if (!current) {
                     console.log(new Error('no last block found'));
                     processingBlock = false;

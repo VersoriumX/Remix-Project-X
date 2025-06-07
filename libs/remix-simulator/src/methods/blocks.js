@@ -44,7 +44,7 @@ export class Blocks {
                     from: receipt.from,
                     gas: bigIntToHex(receipt.gas),
                     chainId: '0xd05',
-                    gasPrice: '0x4a817c800', // 20000000000
+                    gasPrice: '0x4a817c800',
                     hash: receipt.transactionHash,
                     input: receipt.input,
                     nonce: bigIntToHex(tx.nonce),
@@ -68,7 +68,7 @@ export class Blocks {
             difficulty: bigIntToHex(block.header.difficulty),
             totalDifficulty: bigIntToHex(block.header.totalDifficulty || 0),
             extraData: this.toHex(block.header.extraData),
-            size: '0x027f07', // 163591
+            size: '0x027f07',
             gasLimit: bigIntToHex(block.header.gasLimit),
             gasUsed: bigIntToHex(block.header.gasUsed),
             timestamp: bigIntToHex(block.header.timestamp),
@@ -96,7 +96,7 @@ export class Blocks {
                     from: receipt.from,
                     gas: toHex(receipt.gas),
                     chainId: '0xd05',
-                    gasPrice: '0x4a817c800', // 20000000000
+                    gasPrice: '0x4a817c800',
                     hash: receipt.transactionHash,
                     input: receipt.input,
                     nonce: bigIntToHex(tx.nonce),
@@ -120,7 +120,7 @@ export class Blocks {
             difficulty: bigIntToHex(block.header.difficulty),
             totalDifficulty: bigIntToHex(block.header.totalDifficulty || 0),
             extraData: this.toHex(block.header.extraData),
-            size: '0x027f07', // 163591
+            size: '0x027f07',
             gasLimit: bigIntToHex(block.header.gasLimit),
             gasUsed: bigIntToHex(block.header.gasUsed),
             timestamp: bigIntToHex(block.header.timestamp),
