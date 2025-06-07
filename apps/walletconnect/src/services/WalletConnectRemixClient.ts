@@ -56,7 +56,10 @@ export class WalletConnectRemixClient extends PluginClient {
         optimism,
         optimismGoerli,
         goerli,
-        sepolia
+        sepolia,
+        starknet,
+        base,
+        versoriumx
       ]
       const {publicClient} = configureChains(this.chains, [
         w3mProvider({projectId: PROJECT_ID})
