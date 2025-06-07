@@ -1,0 +1,1 @@
+{"version":3,"file":"es-web-worker-handler.js","sourceRoot":"","sources":["es-web-worker-handler.ts"],"names":[],"mappings":"AAAA,MAAM,kBAAkB;IACtB;IAEA,CAAC;IAED,SAAS;QACP,aAAa;QACb,OAAO,IAAI,MAAM,CAAC,IAAI,GAAG,CAAC,mBAAmB,EAAE,MAAM,CAAC,IAAI,CAAC,GAAG,CAAC,CAAC,CAAA;IAClE,CAAC;CACF;AAED,eAAe,kBAAkB,CAAA"}
