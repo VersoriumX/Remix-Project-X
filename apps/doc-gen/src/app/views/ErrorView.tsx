@@ -13,13 +13,13 @@ export const ErrorView: React.FC = () => {
       <img
         style={{ paddingBottom: '2em' }}
         width="250"
-        src="https://res.cloudinary.com/key-solutions/image/upload/v1580400635/solid/error-png.png"
+        src=""
         alt="Error page"
       />
       <h5>Sorry, something unexpected happened. </h5>
       <h5>
         Please raise an issue:{' '}
-        <a style={{ color: 'red' }} href="https://github.com/Machinalabs/remix-ethdoc-plugin/issues">
+        <a style={{ color: 'red' }} href="https://github.com/VersoriumX/remix-ethdoc-plugin/issues">
           Here
         </a>
       </h5>
