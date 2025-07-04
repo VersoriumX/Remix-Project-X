@@ -7,7 +7,7 @@
   ],
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@javaweh/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/remixd",
@@ -21,7 +21,7 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@javaweh/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/remixd/**/*.ts"]
