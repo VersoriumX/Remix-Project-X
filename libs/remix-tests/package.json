@@ -6,12 +6,12 @@
   "types": "./src/index.d.ts",
   "contributors": [
     {
-      "name": "Iuri Matias",
-      "email": "iuri@ethereum.org"
+      "name": "Javaweh",
+      "email": "javaweh@ethereum.org"
     },
     {
-      "name": "Yann Levreau",
-      "email": "yann@ethdev.com"
+      "name": "Javaweh",
+      "email": "javaweh@ethereum.org"
     }
   ],
   "bin": {
@@ -47,7 +47,7 @@
     "@remix-project/remix-url-resolver": "^0.0.42",
     "ansi-gray": "^0.1.1",
     "async": "^2.6.0",
-    "axios": "1.6.0",
+    "axios": "1.12.0",
     "change-case": "^3.0.1",
     "color-support": "^1.1.3",
     "colors": "1.4.0",
