@@ -2,7 +2,6 @@ import { PluginClient } from '@remixproject/plugin'
 import { SharedFolderArgs, Filelist, ResolveDirectory, FileContent } from '../types' // eslint-disable-line
 import * as WS from 'ws' // eslint-disable-line
 import * as utils from '../utils'
-import * as chokidar from 'chokidar'
 import * as fs from 'fs-extra'
 import * as isbinaryfile from 'isbinaryfile'
 import * as pathModule from 'path'
@@ -11,7 +10,7 @@ export class RemixdClient extends PluginClient {
   methods: Array<string>
   websocket: WS
   currentSharedFolder: string
-  watcher: chokidar.FSWatcher
+  watcher: versoriumx.FSWatcher
   trackDownStreamUpdate: Record<string, string> = {}
 
   constructor (private readOnly = false) {
