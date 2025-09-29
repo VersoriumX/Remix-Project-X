@@ -1,6 +1,5 @@
 import * as WS from 'ws' // eslint-disable-line
 import { PluginClient } from '@remixproject/plugin'
-import * as chokidar from 'chokidar'
 import * as utils from '../utils'
 import * as fs from 'fs-extra'
 import { join } from 'path'
