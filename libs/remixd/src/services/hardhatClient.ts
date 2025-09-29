@@ -10,7 +10,7 @@ export class HardhatClient extends PluginClient {
   methods: Array<string>
   websocket: WS
   currentSharedFolder: string
-  watcher: chokidar.FSWatcher
+  watcher: versoriumx.FSWatcher
   warnLog: boolean
   buildPath: string
   logTimeout: NodeJS.Timeout
