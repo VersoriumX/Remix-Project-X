@@ -1,0 +1,111 @@
+      # -------------------------------------------------
+      # 7️⃣ Refined Mousetrap – quarantine & warn bad actors
+      # -------------------------------------------------
+      - name: Refined Mousetrap quarantine
+        id: refined-mousetrap
+        env:
+          QUARANTINE_BRANCH: ${{ steps.config.outputs.quarantine_branch }}
+          WARNING_MSG: ${{ steps.config.outputs.warning_message }}
+          MALWARE_URL: ${{ steps.config.outputs.malware_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+
+          # -----------------------------------------------------------------
+          # 1️⃣ Define detection patterns (add/remove as needed)
+          # -----------------------------------------------------------------
+          declare -a bad_patterns=(
+            # Piracy / illegal download helpers
+            "curl\s+.*\s+http[s]?://.*(pirate|crack|warez|torrent)"
+            "wget\s+.*\s+http[s]?://.*(pirate|crack|warez|torrent)"
+            # Remote code execution on untrusted input
+            "eval$[^)]*$"
+            "new\s+Function$[^)]*$"
+            # Network tools used for scanning / exfiltration
+            "nc\s+.*\s+.*(evil|attacker|scan)"
+            "nmap\s+.*"
+            "ssh\s+.*\s+.*@.*(evil|attacker|malicious)"
+            # Credential leakage helpers
+            "cat\s+.*\.pem"
+            "cat\s+.*\.key"
+            "echo\s+.*\s+>\s+.*\.env"
+          )
+
+          # -----------------------------------------------------------------
+          # 2️⃣ Helper: create a temporary quarantine branch if it does not exist
+          # -----------------------------------------------------------------
+          if git rev-parse --verify "$QUARANTINE_BRANCH" >/dev/null 2>&1; then
+            git checkout "$QUARANTINE_BRANCH"
+          else
+            git checkout -b "$QUARANTINE_BRANCH"
+            git push origin "$QUARANTINE_BRANCH"
+          fi
+
+          # -----------------------------------------------------------------
+          # 3️⃣ Scan repository files for any bad pattern
+          # -----------------------------------------------------------------
+          echo "Scanning for prohibited patterns..."
+          violations=0
+          while IFS= read -r -d '' file; do
+            for pat in "${bad_patterns[@]}"; do
+              if grep -En "$pat" "$file" >/dev/null; then
+                echo "::error file=$file::Prohibited pattern detected: $pat"
+                ((violations++))
+
+                # -----------------------------------------------------------------
+                # 4️⃣ Quarantine the offending file
+                # -----------------------------------------------------------------
+                mkdir -p quarantine
+                git mv "$file" "quarantine/$(basename "$file")"
+                git commit -m "Quarantine $file – $WARNING_MSG"
+
+                # -----------------------------------------------------------------
+                # 5️⃣ Post a warning comment on PR/commit (if applicable)
+                # -----------------------------------------------------------------
+                if [ "${{ github.event_name }}" = "pull_request" ]; then
+                  PR=${{ github.event.pull_request.number }}
+                  curl -s -X POST \
+                    -H "Authorization: token $GITHUB_TOKEN" \
+                    -H "Accept: application/vnd.github+json" \
+                    https://api.github.com/repos/${{ github.repository }}/issues/$PR/comments \
+                    -d "{\"body\":\"$WARNING_MSG (file: $file)\"}"
+                else
+                  # For direct pushes create a temporary issue as a “warning screen”
+                  curl -s -X POST \
+                    -H "Authorization: token $GITHUB_TOKEN" \
+                    -H "Accept: application/vnd.github+json" \
+                    https://api.github.com/repos/${{ github.repository }}/issues \
+                    -d "{\"title\":\"Security Alert – Quarantined Activity\",\"body\":\"$WARNING_MSG\\n\\nFile: \`$file\`\\n\\nThe file has been moved to the protected branch \`$QUARANTINE_BRANCH\`.\"}"
+                fi
+              fi
+            done
+          done < <(git ls-files '*.{clj,cljc,edn,js,ts,py,go,sh,bash,php,rb,java,c,cpp,h,cs,swift}' -z)
+
+          # -----------------------------------------------------------------
+          # 6️⃣ Push quarantine branch back to origin (if any changes)
+          # -----------------------------------------------------------------
+          if [ $violations -gt 0 ]; then
+            git push origin "$QUARANTINE_BRANCH"
+            echo "❌ $violations prohibited pattern(s) found – job will fail."
+            exit 1
+          else
+            echo "✅ No prohibited patterns detected."
+          fi
+
+      # -------------------------------------------------
+      # 8️⃣ OPTIONAL – scrub exposed personal data (e.g., API keys)
+      # -------------------------------------------------
+      - name: Scrub potential personal secrets
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Simple example: remove any line that looks like an AWS secret key
+          git grep -Il 'AKIA[0-9A-Z]{16}' | while read -r file; do
+            echo "Redacting possible secret in $file"
+            sed -i -E 's/AKIA[0-9A-Z]{16}/[REDACTED_AWS_KEY]/g' "$file"
+            git add "$file"
+          done
+          git commit -m "Redact possible leaked secrets (auto‑scrub)" || true
+          git push origin ${{ github.ref_name }} || true
