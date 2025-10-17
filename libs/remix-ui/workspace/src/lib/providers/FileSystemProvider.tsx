@@ -17,7 +17,7 @@ import {
   setFocusElement,
   createNewFolder,
   deletePath,
-  renamePath,
+  renamePath, 
   downloadPath,
   copyFile,
   copyFolder,
