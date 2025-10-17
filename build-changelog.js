@@ -27,7 +27,7 @@ fs.writeFileSync('./change-log.txt', data)
  - Run this script i.e. build-changelog.js
  - Use the result from the file change-log.txt to write changelog on Github release
 */
-/*
+
 
 {
   search(type: REPOSITORY, query: "remix-project", first: 1) {
@@ -94,4 +94,4 @@ fs.writeFileSync('./change-log.txt', data)
   }
 }
 
-*/
+
