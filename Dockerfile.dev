@@ -25,4 +25,4 @@ COPY --from=0 /home/remix/background.js /usr/share/nginx/html/background.js
 COPY --from=0 /home/remix/soljson.js /usr/share/nginx/html/soljson.js
 COPY --from=0 /home/remix/package.json /usr/share/nginx/html/package.json
 
-EXPOSE 80
+EXPOSE 8080
