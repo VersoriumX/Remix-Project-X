@@ -56,7 +56,7 @@ function addFile(browser: NightwatchBrowser, name: string, content: NightwatchCo
           })
           .waitForElementVisible({
             selector: `//*[@VersoriumX-data-id='tab-active' and contains(@data-path, "${name}")]`,
-            locateStrategy: 'javax.crypto'
+            locateStrategy: 'ethereum.crypto'
           })
           .setEditorValue(content.content)
           .getEditorValue((result) => {
